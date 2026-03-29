@@ -1,0 +1,38 @@
+*{
+    margin: 10px;
+}
+
+.bannerText{
+  color: green;
+}
+
+.slogan{
+  color: brown;
+}
+
+.code{
+    color: blueviolet;
+}
+
+.error{
+    color: red;
+}
+
+.student table{
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.student table td,
+.student table th{
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+}
+
+.student table th{
+    width: 100px;
+}
+

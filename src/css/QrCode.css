@@ -1,0 +1,277 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "inter", sans-serif;
+}
+
+.app-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-container {
+    font-weight: 600;
+    font-size: 18px;
+    color: #3498db;
+    border-bottom: 1px solid #f1efef;
+    padding: 10px 0px;
+}
+
+.qr-code-imgae{
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #3498db;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+input[type="text"]{
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 16px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+}
+
+button {
+    padding: 15px 20px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.generate-button {
+    background-color: #3498db;
+}
+
+.generate-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.download-button{
+    background-color: #27ae60;
+    margin-left: 10px;
+}
+
+.download-button:hover {
+    background-color: #219a52;
+}
+
+.footer {
+    margin-top: 30px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #3498db;
+} */
+
+
+
+
+
+
+
+
+/* 🔹 Full Page */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+
+  /* 🔥 Background Image */
+  background: url("/src/assets/Gcc_new.png") no-repeat center center/cover;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+/* 🔥 Dark overlay for readability */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+/* 🔹 Main Container */
+.app-container {
+  position: relative;
+  z-index: 1;
+
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+
+  padding: 30px 25px;
+  border-radius: 16px;
+  width: 360px;
+  text-align: center;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* 🔹 Title */
+.app-container h1 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* 🔹 Input Label */
+.input-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* 🔹 Input Wrapper (for watermark effect) */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* 🔹 Watermark Mask */
+.mask {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #bbb;
+  pointer-events: none;
+  font-family: monospace;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+/* 🔹 Real Input */
+.real-input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+
+  font-size: 14px;
+  font-family: monospace;
+  letter-spacing: 2px;
+
+  background: transparent;
+  position: relative;
+  z-index: 1;
+
+  transition: 0.3s;
+}
+
+.real-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 6px rgba(102, 126, 234, 0.5);
+}
+
+/* 🔹 Buttons */
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* 🔥 Generate Button */
+button:first-of-type {
+  background: linear-gradient(135deg, #667eea, #5a67d8);
+  color: white;
+}
+
+button:first-of-type:hover {
+  transform: scale(1.03);
+}
+
+/* 🔥 Download Button */
+button:last-of-type {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+}
+
+button:last-of-type:hover {
+  transform: scale(1.03);
+}
+
+/* 🔹 Disabled */
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* 🔹 QR Image */
+.qr-code-image {
+  margin: 15px auto;
+  padding: 10px;
+
+  background: #fff;
+  border-radius: 12px;
+
+  width: 150px;
+  height: 150px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 🔹 Loading Text */
+p {
+  font-size: 14px;
+  color: #eee;
+}
+
+/* 🔹 Footer */
+.footer {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #222;
+}
+
+.footer a {
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 🔹 Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
