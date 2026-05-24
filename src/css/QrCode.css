@@ -275,3 +275,14 @@ p {
     transform: translateY(0);
   }
 }
+
+
+a {
+  color: green;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
