@@ -195,7 +195,6 @@ export const QrCode = () => {
       <p className="footer">
         Designed By <a target="_blank" href="https://maps.app.goo.gl/S12NiZi7Vw4K6GRK9">Zone-XI</a>
       </p>
-      
     </div>
   );
 };
