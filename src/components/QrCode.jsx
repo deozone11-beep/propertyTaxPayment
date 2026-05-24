@@ -60,6 +60,7 @@ export const QrCode = () => {
   const [value, setValue] = useState("");
   const [img, setImg] = useState("");
   const [loading, setLoading] = useState(false);
+  const [payLink, setPayLink] = useState("");
 
   const mask = "XX-XXX-XXXXX-XXX";
 
@@ -116,6 +117,7 @@ export const QrCode = () => {
   // 🔹 generate QR
   function generateQR() {
     const fullURL = buildURL(value);
+    setPayLink(fullURL);
 
     if (!fullURL) {
       alert("Please Enter the Property Tax Bill number!");
@@ -158,7 +160,7 @@ export const QrCode = () => {
 
       {img && <img src={img} alt="QR" className="qr-code-image" />}
 
-      <label>Enter Property Number</label>
+      <label>Enter Property Tax Number</label>
 
       <div className="input-wrapper">
         {/* watermark */}
@@ -180,9 +182,18 @@ export const QrCode = () => {
       <button onClick={downloadQR}>
         Download QR Code
       </button>
+      <br />
+      <br />
+      {payLink && (
+          <p>
+            <a href={payLink} target="_blank" rel="noopener noreferrer">
+              Click to Pay
+            </a>
+          </p>
+        )}
 
       <p className="footer">
-        Designed By <a href="#">Zone-XI</a>
+        Designed By <a target="_blank" href="https://maps.app.goo.gl/S12NiZi7Vw4K6GRK9">Zone-XI</a>
       </p>
     </div>
   );
