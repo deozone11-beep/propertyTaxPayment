@@ -99,7 +99,7 @@ export const QrCode = () => {
 
   return (
     <div className="app-container">
-      <h1>QR CODE GENERATOR</h1>
+      <h1>GREATER CHENNAI CORPORATION</h1>
 
       {loading && <p>Please wait...</p>}
 
